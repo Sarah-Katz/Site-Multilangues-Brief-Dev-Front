@@ -2,9 +2,9 @@ import React, { useContext } from 'react';
 import {LangContext} from '../../context/LangContext';
 
 const Button = ({ langCode }) => {
-  const {changeLang} = useContext(LangContext);
+  const {changeLang} = useContext(LangContext); // Importing the method to change language from Context
   let flag;
-  switch (langCode) {
+  switch (langCode) { // This switchs dictates the language the button will set as well as the svg used for it
     case "fr":
       flag = <img src="./images/icones/france.svg" alt="French Flag" />;
       break;

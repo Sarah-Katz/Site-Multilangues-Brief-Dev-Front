@@ -5,17 +5,17 @@ import Button from "../button/Button";
 
 function Page() {
 
-    const {lang} = useContext(LangContext);
+    const {lang} = useContext(LangContext); // Selected language
 
     return (
         <div className="container">
-            <div className="langContainer">
+            <div className="langContainer"> {/** Buttons used to set the language, the "LangCode" prop is the language to set*/}
                 <Button langCode="fr" />
                 <Button langCode="en" />
                 <Button langCode="es" />
             </div>
             <div className="textContainer">
-                <h1 className="title">{locale[lang].title}</h1>
+                <h1 className="title">{locale[lang].title}</h1> {/** Page content, the selected language alters it*/}
                 <p className="text">{locale[lang].welcome}</p>
                 <p className="paragraph">{locale[lang].paragraph1}</p>
                 <p className="paragraph">{locale[lang].paragraph2}</p>

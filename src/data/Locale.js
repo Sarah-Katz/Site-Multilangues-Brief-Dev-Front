@@ -1,3 +1,4 @@
+// File containing all text on the website
 const locale = {
     fr: {
       title: 'Bonjour et bienvenue sur le site.',
