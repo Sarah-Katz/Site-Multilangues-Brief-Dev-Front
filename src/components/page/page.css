@@ -1,0 +1,55 @@
+body {
+  width: 100%;
+  padding: 2%;
+  background-color: #262626;
+}
+
+.title,
+.text {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.textContainer {
+  flex: 8;
+  color: #ffffff;
+  font-size: 2.5em;
+}
+
+.langContainer {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+}
+
+.langButton {
+  margin-top: 10px;
+  border: none;
+  background-color: #ffffff00;
+  width: 70px;
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .textContainer {
+        padding: 40px;
+        font-size: 1em;
+    }
+
+    .langContainer {
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .langButton {
+        width: 50px;
+    }
+}
