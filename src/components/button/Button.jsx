@@ -1,17 +1,17 @@
 import React, { useContext } from 'react';
-import LangContext from '../../context/LangContext';
+import {LangContext} from '../../context/LangContext';
 
 const Button = ({ langCode }) => {
-  const [lang, setLang] = useContext(LangContext);
+  const {changeLang} = useContext(LangContext);
   let flag;
   switch (langCode) {
-    case "FR":
+    case "fr":
       flag = <img src="./images/icones/france.svg" alt="French Flag" />;
       break;
-    case "EN":
+    case "en":
       flag = <img src="./images/icones/united-kingdom.svg" alt="English Flag" />;
       break;
-    case "ES":
+    case "es":
       flag = <img src="./images/icones/spain.svg" alt="Spanish Flag" />;
       break;
     default:
@@ -19,7 +19,7 @@ const Button = ({ langCode }) => {
   }
 
   return (
-    <button className="langButton" onClick={() => setLang(langCode)}>
+    <button className="langButton" onClick={() => changeLang(langCode)}>
       {flag}
     </button>
   );
