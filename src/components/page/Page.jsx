@@ -17,6 +17,8 @@ function Page() {
             <div className="textContainer">
                 <h1 className="title">{locale[lang].title}</h1>
                 <p className="text">{locale[lang].welcome}</p>
+                <p className="paragraph">{locale[lang].paragraph1}</p>
+                <p className="paragraph">{locale[lang].paragraph2}</p>
             </div>
         </div>
     );
